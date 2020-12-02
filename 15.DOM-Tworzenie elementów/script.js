@@ -166,14 +166,22 @@ Na podstawie obiektu stwórz struktórę w html
         let main = document.createElement('ul');
 
         function createElement(root, main) {
+
+            function createLiElement(text) {
+                let li = document.createElement('li');
+                li.innerHTML = text;
+                return li;
+            }
+
             for (let node in root) {
                 if (typeof (root[node]) === 'object') {
+                    let li = createLiElement(node);
+                    main.appendChild(li);
                     let newRoot = document.createElement('ul');
+                    li.appendChild(newRoot);
                     createElement(root[node], newRoot);
                 } else {
-                    let li = document.createElement('li');
-                    li.innerText = node + ' ' + root[node]
-                    main.appendChild(li);
+                    main.appendChild(createLiElement( node + ' : ' + root[node]));
                 }
             }
         };
@@ -530,7 +538,6 @@ Stwórz funkcję która przyjmuje dowolnego stringa. Następnie Wrzuć tego stri
 Dopisz metodę do obiektu która będzie sprawdzać czy w tekście występuje string 'Ala' i jeśli tak to zamieni go na 'Ola'. 
 Jeśli tekst nie występuje to niech utworzy odpowiedniego diva i doda do niego tekst "Słowo Ala nie występuje w tekście." */
 {
-    console.log("---------- Zadanie 12 ----------");
 
     function checkStringTextWithAla(text) {
         let person = {

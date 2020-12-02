@@ -40,7 +40,7 @@ Napisz funkcje która będzie wypisywać w konsoli elementy przekazane w paramet
 4. wszystkie spany znajdujące się w elemencie div z klasą list
 5. wszystkie spany znajdujące się w elemencie div który posiada id='spans' */
 {
-    onsole.log("\n---------- Zadanie 4 ----------");
+    console.log("\n---------- Zadanie 4 ----------");
 
     function writeDomElements() {
         for (let argument of arguments) {

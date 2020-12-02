@@ -59,14 +59,11 @@ Stwórz funkcję która zwracać będzie wynik dodawania oraz odejmowania liczb 
 
 /* Zadanie 4
 Zmień tekst w elemencie o id spanText na dowolny */
-console.log("\n---------- Zadanie 4 ----------");
 
 document.querySelector('#spanText').innerText = 'Dowolny tekst';
 
 /* Zadanie 5
 Zmień klasę elementowi o id spanText na dowolną */
-
-console.log("\n---------- Zadanie 5 ----------");
 
 document.querySelector('#spanText').classList.add('newClass');
 
@@ -94,8 +91,6 @@ Następnie usuń wszystkie klasy temu elementowi i wypisz w konsoli tekst: "Usun
 /* Zadanie 7
 Znajdź wszystkie elementy li w elemencie longList. Przekaż te elementy do funkcji której zadaniem będzie dodanie każdemu elementowi li atrybutu data-text="text" ale tylko tym elementom w których taki data atrybut nie istnieje. */
 {
-    console.log("\n---------- Zadanie 7 ----------");
-
     function func() {
         let elements = document.querySelectorAll('#longList li');
 
@@ -123,8 +118,6 @@ Napisz funkcję która będzie przyjmować parametr typu string. Następnie stri
 
 Obiekt ten przekaż do drugiej funkcji w której odczytasz string z obiektu i przypisz go do zmiennej. Następnie ustaw taką klasę elementowi o id myDiv. */
 {
-    console.log("\n---------- Zadanie 8 ----------");
-
     function func() {
 
         function setClassObject(className) {
@@ -149,8 +142,6 @@ Obiekt ten przekaż do drugiej funkcji w której odczytasz string z obiektu i pr
 Napisz funkcję która będzie dodawać odpowiednią klasę do elementu o id "numbers" w zależności od przekazanego parametru. Parametr powinien być losową liczbą z zakresu 0-10. 
 Jeśli liczba będzie parzysta ustaw klasę 'even' jak nieparzysta 'odd; */
 {
-    console.log("\n---------- Zadanie 9 ----------");
-
     function func() {
         let elem = document.querySelector('#numbers');
     
@@ -168,7 +159,7 @@ Napisz funkcję do której przekaż element o id "longList". Następnie zwróć 
     console.log("\n---------- Zadanie 10 ----------");
 
     function func(elem) {
-        let values = Array.from(document.querySelector(elem).children).map(a => a.textContent)
+        let values =Array.from(elem.children).map(a => a.textContent)
     
         console.info('values', values);
     };
